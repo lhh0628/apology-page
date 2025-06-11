@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>抱歉啦！😅</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: #f0f8ff;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    #message {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    #joke {
+      font-size: 20px;
+      color: #555;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background: #48c9b0;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1abc9c;
+    }
+  </style>
+</head>
+<body>
+  <div id="message">对不起！真是我的错 😓</div>
+  <button onclick="showJoke()">逗我笑一下</button>
+  <div id="joke"></div>
+
+  <script>
+    const jokes = [
+      "我觉得自己像个 WiFi 信号 —— 总是连不上你 🏁😂",
+      "我的脑子突然断电，所以才没想到道歉这事🙈",
+      "我不是故意的，我说话就像 GPS，总是得重新导航😂",
+      "对不起，我把你的耐心拿去修我的脑洞了🛠️😅"
+    ];
+    function showJoke() {
+      const j = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById('joke').textContent = j;
+    }
+  </script>
+</body>
+</html>
